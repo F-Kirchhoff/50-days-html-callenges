@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  background-color: crimson;
+}
+
+.addNoteBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.notes-container {
+  width: 100vw;
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.note {
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 5px;
+}
+.noteheader {
+  background-color: lightpink;
+  display: flex;
+  justify-content: flex-end;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.noteheader i {
+  padding: 6px;
+  cursor: pointer;
+}
+.notecontent {
+  padding: 6px;
+  background-color: white;
+  min-height: 300px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

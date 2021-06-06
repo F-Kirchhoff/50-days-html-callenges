@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darksalmon;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.speeddial {
+  position: absolute;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.speeddial > input {
+  width: 50px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: coral solid 3px;
+  font-size: 1.5rem;
+}
+
+.speeddial > input:focus {
+  outline: none;
+}

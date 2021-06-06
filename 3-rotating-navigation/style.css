@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #222;
+}
+.container {
+    position: relative;
+    color: #222;
+}
+.circle-container {
+    position: fixed;
+    top: -110px;
+    left: -110px;
+    z-index: 3;
+
+}
+.circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    position: relative;
+}
+
+.navBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+input[type="checkbox"] {
+    transition: all 0.3s;
+    display: none;
+}
+.sidebarIconToggle { 
+    cursor: pointer;
+    height: 28px;
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.spinner {
+    transition: all 0.3s;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal, .diagonal.part-2 {
+    margin-top: 9px;
+}
+
+input[type=checkbox]:checked  ~ .menu {
+    opacity: 1;
+}
+input[type=checkbox]:checked  ~ .sidebarIconToggle > .horizontal {
+    opacity: 0;
+}
+input[type=checkbox]:checked  ~ .sidebarIconToggle > .diagonal.part-1 {
+    transform: translateY(12px) rotate(135deg) ;
+}
+input[type=checkbox]:checked ~  .sidebarIconToggle > .diagonal.part-2 {
+    transform: translateY(-12px) rotate(-135deg);
+}   
+
+.content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+    transform-origin: top left;
+    transition: 0.7s ease;
+    min-height: 100vh;
+}
+
+.rotated {
+    transform: rotateZ(-20deg);
+}
+.translated {
+    transform: translateX(50px);
+}
+nav {
+    color: #fff;
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: -1;
+    transform: translateX(-100px);
+    transition: 0.7s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+nav ul li + li {
+    margin-left: 15px;
+}
+
+nav ul li + li + li {
+    margin-left: 30px;
+}

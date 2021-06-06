@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: dodgerblue;
+  color: #fff;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  margin: 0;
+  font-weight: bold;
+}
+.bigcup {
+  width: 200px;
+  height: 450px;
+  background-color: #fff;
+  color: midnightblue;
+  border: solid 3px midnightblue;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  margin: 30px;
+}
+
+.emptyGlass {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  position: absolute;
+  top: 0;
+}
+
+.fullGlass {
+  height: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  background-color: deepskyblue;
+  position: absolute;
+  bottom: 0;
+}
+
+.cupcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 250px;
+  margin: 20px;
+}
+
+.smallcup {
+  width: 50px;
+  height: 100px;
+  background-color: #fff;
+  color: midnightblue;
+  margin: 3px;
+  padding: 4px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: solid 3px midnightblue;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.smallcup.filled {
+  background-color: deepskyblue;
+  color: #fff;
+}

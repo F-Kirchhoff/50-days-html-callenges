@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+:root {
+  --bg-color: black;
+  --line-color: #222;
+  --sec-color: red;
+  --min-color: #efefef;
+  --hour-color: pink;
+  --secwidth: 10px;
+  --secsize: 300px;
+  --minwidth: 10px;
+  --minsize: 220px;
+  --hoursize: 150px;
+  --hourwidth: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.clock {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
+.sec *,
+.min *,
+.hour * {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+.filler {
+  width: 100%;
+  height: 100%;
+}
+
+.sec {
+  position: absolute;
+  width: var(--secsize);
+  height: var(--secsize);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.sec .filler {
+  background-color: var(--sec-color);
+}
+
+.sec .inner {
+  width: calc(100% - var(--secwidth) * 2);
+  height: calc(100% - var(--secwidth) * 2);
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
+.sec .cutter {
+  height: 0;
+  width: 0;
+  border-top: solid calc(var(--secsize) / 2 + 1px) var(--line-color);
+  border-bottom: solid calc(var(--secsize) / 2 + 1px) var(--line-color);
+  border-left: solid calc(var(--secsize) / 2 + 1px) var(--line-color);
+  border-right: solid calc(var(--secsize) / 2 + 1px) transparent;
+  transform: translate(-50%, -50%) rotate(-48deg);
+}
+.sec .cutter.left {
+  transition-delay: 0.08s;
+}
+.sec .cutter.right {
+  transform: translate(-50%, -50%) rotate(-132deg);
+}
+
+.min {
+  position: absolute;
+  border-radius: 50%;
+  width: var(--minsize);
+  height: var(--minsize);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.min .filler {
+  background-color: var(--min-color);
+}
+.min .cutter {
+  height: 0;
+  width: 0;
+  border-top: solid calc(var(--minsize) / 2 + 1px) var(--line-color);
+  border-bottom: solid calc(var(--minsize) / 2 + 1px) var(--line-color);
+  border-left: solid calc(var(--minsize) / 2 + 1px) var(--line-color);
+  border-right: solid calc(var(--minsize) / 2 + 1px) transparent;
+  transform: translate(-50%, -50%) rotate(-48deg);
+  transition: 1.5ms;
+}
+.min .cutter.left {
+  transition-delay: 1s;
+}
+
+.min .cutter.right {
+  transform: translate(-50%, -50%) rotate(-129deg);
+}
+
+.min .inner {
+  width: calc(100% - var(--minwidth) * 2);
+  height: calc(100% - var(--minwidth) * 2);
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}
+
+.hour {
+  position: absolute;
+  border-radius: 50%;
+  width: var(--hoursize);
+  height: var(--hoursize);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hour .filler {
+  background-color: var(--hour-color);
+}
+.hour .cutter {
+  height: 0;
+  width: 0;
+  border-top: solid calc(var(--hoursize) / 2 + 1px) var(--line-color);
+  border-bottom: solid calc(var(--hoursize) / 2 + 1px) var(--line-color);
+  border-left: solid calc(var(--hoursize) / 2 + 1px) var(--line-color);
+  border-right: solid calc(var(--hoursize) / 2 + 1px) transparent;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: 3s;
+}
+.hour .cutter.left {
+  transition-delay: 2s;
+}
+.hour .cutter.right {
+  transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+.hour .inner {
+  width: calc(100% - var(--hourwidth) * 2);
+  height: calc(100% - var(--hourwidth) * 2);
+  border-radius: 50%;
+  background-color: var(--bg-color);
+}

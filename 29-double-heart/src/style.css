@@ -1,0 +1,17 @@
+.heart {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  animation: heartAnimation 1s ease;
+}
+
+@keyframes heartAnimation {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}

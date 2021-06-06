@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+
+.bg-bottom {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: beige;
+  z-index: -1;
+}
+
+.nav-container {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  padding: 0;
+  margin: 0;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.7s ease;
+  width: 250px;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 5px;
+  transition: all 0.7s ease;
+  transform: rotateY(0deg);
+}
+.nav-container.closed .menu {
+  padding: 0;
+  width: 0;
+  /* opacity: 0; */
+}
+.nav-container.closed .menu li {
+  transform: rotateY(90deg);
+}
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  /* margin: 10px; */
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.bar {
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.7s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.toggle .upper {
+  transform: rotate(45deg);
+}
+.toggle .lower {
+  transform: rotate(-45deg);
+}
+
+.nav-container.closed > .toggle .upper {
+  transform: rotate(-180deg);
+  top: 33%;
+}
+.nav-container.closed > .toggle .lower {
+  transform: rotate(180deg);
+  top: 66%;
+}

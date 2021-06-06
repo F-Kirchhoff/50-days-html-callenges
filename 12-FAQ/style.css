@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.faq-container {
+    max-width: 100%;
+}
+
+.faq {
+    width: 600px;
+    border: solid 1px #999;
+    border-radius: 15px;
+    position: relative;
+    padding: 30px;
+    padding-right: 100px;
+    margin: 10px;
+    transition: all .4s ease;   
+    overflow: hidden;
+}
+
+.faq.active {
+    background-color: #fff;
+}
+
+.faq.active::before, .faq.active::after {
+    content:"\f075";
+    font-family: "Font Awesome 5 Free";
+    color: #2ecc75;
+    font-size: 7rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: .2;
+    z-index: 0;
+}
+
+.faq.active::before{
+    color: #3498db;
+    top: -20px;
+    left: -15px;
+    transform: rotateY(180deg);
+}
+
+.faq-title {
+    margin: 0 35px 0 0;
+}
+.faq-text {
+    margin: 30px 0 0;
+    display: none;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width:30px;
+    height:30px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.faq-toggle:focus{
+    border:none;
+}
+.faq.active .faq-toggle {
+    background-color: #aaa;
+}
+.faq.active .faq-toggle .fas.fa-chevron-down {
+    display: none;
+}    
+.faq .faq-toggle .fas.fa-times {
+    display: none;
+    color: #fff;
+}    
+.faq.active .faq-toggle .fas.fa-times {
+    display: block;
+}    

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.counter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  text-align: center;
+}
+.nums {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: mediumseagreen;
+  overflow: hidden;
+  width: 250px;
+  height: 70px;
+}
+.nums span {
+  position: absolute;
+  padding-bottom: 10px;
+  top: 70%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.nums span.in {
+  transform: translate(-50%, -50%) rotate(-120deg);
+  animation: rotate 1s ease-in-out;
+}
+.counter h4 {
+  margin: 5px 0;
+  font-size: 25px;
+  color: lightslategray;
+}
+
+.countdown.finished > .counter {
+  transform: translate(-50%, -50%) scale(0);
+  animation: hide 0.2s ease-out;
+}
+
+.final {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+}
+.final h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.countdown.finished > .final {
+  animation: show 0.2s ease-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+  70% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}

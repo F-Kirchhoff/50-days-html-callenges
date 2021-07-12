@@ -2,7 +2,7 @@ const container = document.querySelector(".hover-container");
 
 const hexCodes = "0123456789abcdef"
 const hoverEnter = .5;
-const hoverStay = .5;
+const hoverStay = .7;
 const hoverLeave = 1;
 
 const getRandomColor = (seed = "#") => {
@@ -12,12 +12,15 @@ const getRandomColor = (seed = "#") => {
 }
 
 const getHSLColor = () => {
-  return `hsl(${(Math.floor(Date.now()/100))%360}, ${20 + Math.floor(Math.random()*20)}%, ${40 + Math.floor(Math.random()*10)}%)`
+  return `hsl(${(Math.floor(Date.now()/100))%360}, ${30 + Math.floor(Math.random()*20)}%, ${50 + Math.floor(Math.random()*10)}%)`
 }
 
 const setColor = (e , msg, deltaT) => {
-  e.target.style.backgroundColor = msg === "random" ? getHSLColor() : null;
-  // e.target.style.backgroundColor = msg === "random" ? getRandomColor() : null;
+  const color = msg === "HSL" ? getHSLColor() :
+    msg === "random" ? getRandomColor() : 
+    null;
+  e.target.style.backgroundColor = color;
+  e.target.style.boxShadow = color ? `0 0 2px ${color},0 0 10px ${color}` : null;
   e.target.style.transition = `${deltaT}s`
 }
 
@@ -26,8 +29,8 @@ tileBlueprint.classList.add("tile");
 
 const addTile = () => {
   const newTile = tileBlueprint.cloneNode();
-  newTile.addEventListener("mouseenter", e => setColor(e,"random", hoverEnter));
-  newTile.addEventListener("mouseleave", e => setTimeout(() => setColor(e,null, hoverLeave), Math.round(hoverStay * 500)));
+  newTile.addEventListener("mouseenter", e => setColor(e,"HSL", hoverEnter));
+  newTile.addEventListener("mouseleave", e => setTimeout(() => setColor(e,null, hoverLeave), Math.round(hoverStay * 1000)));
   container.appendChild(newTile);
 }
 

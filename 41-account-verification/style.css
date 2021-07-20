@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  min-height: 300px;
+  border: solid 1px #a1a1a1;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container p {
+  margin-bottom: 2rem;
+}
+
+.digit-input {
+  width: 60px;
+  font-size: 2.5rem;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: solid 1.2px lightgray;
+  border-radius: 3px;
+}
+
+.digit-input.filled {
+  border: solid 1.2px lightgray;
+  border-radius: 3px;
+  border-bottom: solid mediumturquoise 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container.success .digit-input {
+  background-color: lightgreen;
+  color: green;
+  border-color: green;
+}
+
+.container.error .digit-input {
+  background-color: pink;
+  color: crimson;
+  border-color: crimson;
+}

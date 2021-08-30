@@ -18,7 +18,6 @@ digits.forEach( (digit,idx) => {
         digit.blur();
       }
       
-      console.log(isInputComplete());
       if ( isInputComplete() ) {
 
         const isCorrect = checkInput();

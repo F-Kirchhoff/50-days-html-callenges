@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="uft-8" />
+    <meta name="viewport" content="witth=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Feedback UI</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <p>How satisfied are you with our customer support performance?</p>
+
+      <div class="btn-container">
+        <button class="btn" id="unhappy">
+          <p class="smiley">☹️</p>
+          <small>unhappy</small>
+        </button>
+        <button class="btn" id="neutral">
+          <p class="smiley">😐</p>
+          <small>neutral</small>
+        </button>
+        <button class="btn" id="satisfied">
+          <p class="smiley">😄</p>
+          <small>satisfied</small>
+        </button>
+      </div>
+
+      <button id="send">Send Review</button>
+    </div>
+
+    <div class="overlay">
+      <div class="container">
+        <p id="feedbacktext">
+          Thanks for your feedback! You are with our service.
+        </p>
+        <p class="smiley">😊</p>
+        <button id="acceptFeedbackBtn">ok</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,13 +1,13 @@
 
-import dynamicGradient from "./dynamicGradient";
+import dynamicGradient from "./dynamicGradient.js";
 
 const quizInterface = document.getElementById('quiz');
 const content = document.querySelector('.content');
 const body = document.body;
 
 
-firstNodeColors = ['#1F3938','#5E9872','#81CDE9'];
-secondNodeColors = ['#0CAADC','#1F3938','#1A5D79'];
+const firstNodeColors = ['#1F3938','#5E9872','#81CDE9'];
+const secondNodeColors = ['#0CAADC','#1F3938','#1A5D79'];
 
 
 dynamicGradient(firstNodeColors,secondNodeColors,8000,body)

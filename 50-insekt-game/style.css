@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  margin: 0;
+  background-color: rgb(0, 119, 255);
+  overflow: hidden;
+  color: white;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 3s;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.btn {
+  font-family: "Press Start 2P", sans-serif;
+
+  border: none;
+  background-color: white;
+  color: rgb(0, 119, 255);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.96);
+}
+
+.insect-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.choose-insect-btn {
+  font-family: "Press Start 2P", sans-serif;
+
+  border: solid white 4px;
+  margin: 20px;
+  color: white;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.choose-insect-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.game {
+  position: relative;
+}
+.game .time {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.game .score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.game .msg {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.insect {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  object-fit: cover;
+  cursor: pointer;
+}

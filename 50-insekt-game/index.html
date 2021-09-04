@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="uft-8" />
+    <base href="." />
+    <meta name="viewport" content="witth=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Insect game</title>
+  </head>
+
+  <body>
+    <div class="screen">
+      <h1>Catch the insect</h1>
+      <button class="btn" id="btn-start">play</button>
+    </div>
+    <div class="screen">
+      <h1>What is your favorite insect?</h1>
+      <ul class="insect-list">
+        <li>
+          <button class="choose-insect-btn">
+            <p>fly</p>
+            <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>wasp</p>
+            <img src="http://pngimg.com/uploads/wasp/wasp_PNG3.png" alt="" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>bug</p>
+            <img src="http://pngimg.com/uploads/bug/bug_PNG3994.png" alt="" />
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="screen game">
+      <h3 class="time">time: 00:00</h3>
+      <h3 class="score">Score: 0</h3>
+      <h5 class="msg">Are you annoyed yet?</h5>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
